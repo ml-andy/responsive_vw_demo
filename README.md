@@ -1,8 +1,8 @@
 # 利用 vw 搭配sass 製作 Responsive Web
 # 優點：
-1.完全可用原本切桌機的方法來切Responsive或手機型 網頁
+1.完全可用原本切桌機的方法來切Responsive或手機型 網頁，不用再換算百分比或使用 img 撐高度
 
-2.可不再為了方便切板而使用viewport固定寬，使用正統的device-width
+2.使用正統的device-width，可不再為了方便切板而使用viewport固定寬
 
 # 缺點：
 不支援IE8以下、android 4.3以下
@@ -20,7 +20,7 @@
 
 
 # 用法：
-如要在 640 尺寸下製作一個 250px * 150px 的div
+如要在 640px 的PSD尺寸下製作一個可以隨視窗等比例縮放的 250px * 150px 的div
 
 	@function getVW($aa) {
 
