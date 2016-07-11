@@ -1,4 +1,4 @@
-# 利用 vw 搭配sass 製作 Responsive Web
+# 利用 vw 搭配scss 製作 Responsive Web
 # 優點：
 1.完全可用原本切桌機的方法來切Responsive或手機型 網頁，不用再換算百分比或使用 img 撐高度
 
