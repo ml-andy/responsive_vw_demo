@@ -8,11 +8,11 @@
 不支援IE8以下、android 4.3以下
 
 # 方式：
-@function getVW($aa) {
+	@function getVW($aa) {
 
-  @return ($aa / 'psd-width') * 100vw;
+		@return ($aa / 'psd-width') * 100vw;
 
-}
+	}
 
 '$aa':任何在psd裡原本使用px的地方(包含文字大小)
 
@@ -22,17 +22,17 @@
 # 用法：
 如要在 640 尺寸下製作一個 250px * 150px 的div
 
-@function getVW($aa) {
+	@function getVW($aa) {
 
-	@return ($aa / 640) * 100vw;
+		@return ($aa / 640) * 100vw;
 
-}
+	}
 
 
-div{
+	div{
 
-	width: getVW(250);
+		width: getVW(250);
 
-	height: getVW(150);
+		height: getVW(150);
 
-}
+	}
