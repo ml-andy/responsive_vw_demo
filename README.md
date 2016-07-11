@@ -4,6 +4,9 @@
 
 2.可不再為了方便切板而使用viewport固定寬，使用正統的device-width
 
+# 缺點：
+不支援IE8以下、android 4.3以下
+
 # 方式：
 @function getVW($aa) {
 
@@ -21,7 +24,7 @@
 
 @function getVW($aa) {
 
-  @return ($aa / 640) * 100vw;
+	@return ($aa / 640) * 100vw;
 
 }
 
@@ -31,5 +34,5 @@ div{
 	width: getVW(250);
 
 	height: getVW(150);
-	
+
 }
