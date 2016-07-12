@@ -22,7 +22,7 @@ Demo: https://ml-andy.github.io/responsive_vw_demo/demo.html
 
 
 # 用法：
-如要在 640px 的PSD尺寸下製作一個可以隨視窗等比例縮放的 250px * 150px 的div
+如要在 640px 的PSD尺寸下製作一個可以隨視窗等比例縮放的 250px * 150px Div區塊
 
 	@function getVW($aa) {
 
@@ -37,4 +37,28 @@ Demo: https://ml-andy.github.io/responsive_vw_demo/demo.html
 
 		height: getVW(150);
 
+	}
+
+# 搭配自己的mixin 更有效率：
+可以省去打function名稱的時間，同時做其他設定。
+如要在 640px 的PSD尺寸下製作一個可以隨視窗等比例縮放並置中的 250px * 150px Div區塊
+
+	@function getVW($aa) {
+
+		@return ($aa / 640) * 100vw;
+
+	}
+
+	@mixin alt($wt:100%,$ht:100%,$left:0,$top:0,$mleft:0,$mtop:0){
+		position:absolute;
+		width:getVW($wt);
+		height: getVW($ht);  
+		top: $top;
+		left:$left;
+		margin-left:getVW($mleft);
+		margin-top: getVW($mtop);
+	}
+
+	div{
+		@include altvw(250,150,50%,50%,-125,-75);
 	}
