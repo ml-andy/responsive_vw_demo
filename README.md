@@ -41,6 +41,7 @@ Demo: https://ml-andy.github.io/responsive_vw_demo/demo.html
 
 # 搭配自己的mixin 更有效率：
 可以省去打function名稱的時間，同時做其他設定。
+
 如要在 640px 的PSD尺寸下製作一個可以隨視窗等比例縮放並置中的 250px * 150px Div區塊
 
 	@function getVW($aa) {
