@@ -1,9 +1,65 @@
 @import "base.scss";
-
 @function getVW($aa) {
-  @return ($aa / 640) * 100vw;
+	@return $aa * 1px;
 }
-// @media screen and (max-width: 640px) {
+.wrapper{
+	position: relative;
+	width:640px;
+	margin: auto;
+	//origin
+	&.demo{
+		height:getVW(990);
+		background: url(../images/bg.jpg) no-repeat;
+		background-size: 100%;
+		background-position: center top;
+		.demo_btn{
+			position:absolute;
+			width: getVW(285);
+			height: getVW(155);
+			left: getVW(13);
+			top: getVW(770);
+			border-radius: getVW(5);
+			background: url(../images/icon-service@2.png) no-repeat;
+			background-size: getVW(66) auto;
+			background-position: center getVW(40);
+			background-color: #5888f6;
+			.txt{
+				position: absolute;
+				width: 100%;
+				height: getVW(24);
+				bottom: getVW(33);
+				font-size: getVW(24);
+				color:#FFF;
+				text-align: center;
+			}
+		}
+		.demo_btn2{
+			position:absolute;
+			width: getVW(285);
+			height: getVW(155);
+			right: getVW(13);
+			top: getVW(770);
+			border-radius: getVW(5);
+			background: url(../images/icon-store@2.png) no-repeat;
+			background-size: getVW(66) auto;
+			background-position: center getVW(40);
+			background-color: #5888f6;
+			.txt{
+				position: absolute;
+				width: 100%;
+				height: getVW(24);
+				bottom: getVW(33);
+				font-size: getVW(24);
+				color:#FFF;
+				text-align: center;
+			}
+		}
+	}
+}
+@media screen and (max-width: 640px) {
+	@function getVW($aa) {
+		@return ($aa / 640) * 100vw;
+	}
 	*{box-sizing:border-box;}
 	.wrapper{
 		position: relative;
@@ -58,4 +114,4 @@
 			}
 		}
 	}
-// }
+}
