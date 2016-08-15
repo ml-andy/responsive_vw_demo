@@ -263,17 +263,10 @@ a{outline: none;hlbr:expression(this.onFocus=this.blur());text-decoration:none;}
 img{vertical-align:top;}
 
 @function getVW($aa) {
-  @return ($aa / 640) * 100vw;
+  @if $vpw > 640 {
+    @return $aa * 1px;
+  }
+  @else if $vpw == 640 {
+    @return ($aa / 640) * 100vw;
+  }
 }
-// .my-module {
-//   width: defultfc(650px, 1000px);
-// }
-// .message {
-//   border: 1px solid #ccc;
-//   padding: 10px;
-//   color: #333;
-// }
-// .success {
-//   @extend .message;
-//   border-color: green;
-// }

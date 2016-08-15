@@ -1,7 +1,5 @@
 @import "base.scss";
-@function getVW($aa) {
-	@return $aa * 1px;
-}
+$vpw:641;
 .wrapper{
 	position: relative;
 	width:640px;
@@ -56,10 +54,8 @@
 		}
 	}
 }
+$vpw:640;
 @media screen and (max-width: 640px) {
-	@function getVW($aa) {
-		@return ($aa / 640) * 100vw;
-	}
 	*{box-sizing:border-box;}
 	.wrapper{
 		position: relative;
@@ -115,3 +111,4 @@
 		}
 	}
 }
+
